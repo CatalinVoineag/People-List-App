@@ -1,0 +1,30 @@
+<section class="details">
+ <div class="container">
+	<div class="row" ng-model="people">
+				
+		<div class="image col-md-8 col-md-offset-2">
+			
+			
+			<h2>{{people[whichItem].name.firstName + ' ' + people[whichItem].name.surName}}</h2>
+			<img class="img-responsive" ng-src="{{people[whichItem].picture}}" >
+			<div class="bio col-md-8">
+				<p class="about lead">About:</p>
+				<p class="peopleAbout">{{people[whichItem].about}}</p>
+				<a href="#index.html" class="back"><button type="button" class="back1 btn btn-primary">&laquo; Back to search</button></a>
+				</div>
+				<div class="friends-group">
+					<p class="friends lead">Friends:</p>	
+					<ul class="list-group" ng-repeat="friend in people[whichItem].friends">
+					  <li class="list-group-item list-group-item-info">
+					  	<p class="friendName lead">{{friend.name}}</p>
+					  	<img class="friendImage" ng-src="{{friend.picture}}">
+					  </li>
+					</ul>
+					<a href="#index.html" class="back"><button type="button" class="btn btn-primary">&laquo; Back to search</button></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+		
+</section>

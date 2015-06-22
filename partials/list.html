@@ -1,0 +1,22 @@
+
+		<section class="peoplePage">
+			
+			<div class="search">
+				<h1>Employee Directory</h1>
+				<input ng-model="query" placeholder="Search for employees" autofocus>
+			</div>
+			<ul class="peopleList">
+				<li ng-animate="animate" class="person" ng-repeat="person in people | filter: query | limitTo: 6">
+					<a href="#/details/{{people.indexOf(person)}}">
+						<img ng-src="{{person.picture}}" alt="Photo of {{person.name.firstName + ' ' + person.name.surName}}">
+						<div class="info">
+							<h2>{{person.name.firstName + ' ' + person.name.surName}}</h2>
+							<p>{{person.address}}</p>
+							<p>{{person.phone}}</p>
+							
+						</div>
+					</a>
+				</li>
+			</ul>
+		</section>
+	
